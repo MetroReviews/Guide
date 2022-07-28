@@ -7,8 +7,10 @@ export type NPMDocument = {
   }
 }
 
+const versionOfMetroAPI = '0.1.0'
+
 export const getNPMVersion = async (packageName: string): Promise<string> => {
-  const res = await fetch(`https://registry.npmjs.org/metro-bots/${packageName}`);
+  const res = await fetch(`https://registry.npmjs.org/${packageName}`);
   const json = await res.json();
 
   const {
@@ -27,13 +29,15 @@ export const getNPMVersion = async (packageName: string): Promise<string> => {
 
 
 export const getAllVersions = async () => {
+
   const [
-    metroTSAPI,
+    metroAPI
   ] = await Promise.all([
-    getNPMVersion('metro-api')
+    getNPMVersion('metro-sdk')
   ])
 
   return {
-    'metro-api': metroTSAPI
+    'metro-sdk': `v${metroAPI}`,
+    'metro-api': `v${versionOfMetroAPI}`
   }
 }

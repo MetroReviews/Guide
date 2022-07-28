@@ -15,7 +15,7 @@ export const VersionNumber: React.FC<{
 
   return (
     <InlineCode>
-      v1.0.0
+      { version || '1.0.0' }
     </InlineCode>
   )
 }

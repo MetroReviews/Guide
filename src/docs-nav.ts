@@ -190,5 +190,23 @@ export const nav: DocsNav = [
         label: 'Overview',
       },
     ]
+  },
+  {
+    type: 'group',
+    href: '/docs/node-sdk',
+    label: 'Node SDK',
+    versionName: 'metro-sdk',
+    items: [
+      {
+        type: 'overview',
+        href: '/docs/node-sdk',
+        label: 'Introduction'
+      },
+      {
+        type: 'link',
+        href: '/docs/node-sdk/lists',
+        label: 'List Actions'
+      }
+    ]
   }
 ]
