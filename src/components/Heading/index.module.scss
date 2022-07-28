@@ -1,0 +1,79 @@
+@use "@scss/common" as *;
+
+.headingAnchor {
+  display: inline-flex;
+  &:hover {
+    &:local() {
+      .hashMark {
+        display: block;
+      }
+    }
+  }
+}
+
+.canCopy {
+  position: relative;
+}
+
+.hashMark {
+  position: absolute;
+  right: calc(100% + #{base(0.5)});
+  top: 0;
+  display: none;
+
+  @include mid-break {
+    display: block;
+    position: relative;
+    top: unset;
+    right: unset;
+    margin-right: base(0.5)
+  }
+}
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3;
+}
+
+.h4 {
+  @include h4;
+}
+
+.h5 {
+  @include h5;
+}
+
+.h6 {
+  @include h6;
+}
+
+.p {
+  @include p;
+}
+
+.small {
+  @include small;
+}
+
+.jumbo {
+  @include jumbo;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.noMarginTop {
+  margin-top: 0;
+}
+
+.noMarginBottom {
+  margin-bottom: 0;
+}

@@ -1,0 +1,15 @@
+@use "@scss/common" as *;
+
+.desktopNav {
+  @include mid-break {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: none;
+  @include mid-break {
+    margin-top: base();
+    display: flex;
+  }
+}

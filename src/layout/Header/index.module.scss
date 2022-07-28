@@ -1,0 +1,44 @@
+@use "@scss/common" as *;
+
+.header {
+  width: 100%;
+  margin: base(2) 0;
+  @include mid-break {
+    margin: base() 0;
+  }
+}
+
+.wrapper {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+
+  & > *:not(:last-child) {
+    margin-right: base();
+  }
+}
+
+.logoAnchor {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: base();
+  // margin-left: base(0.5);
+}
+
+.logoImage {
+  width: 25px;
+  height: 25px;
+  margin-right: base(0.5);
+}

@@ -1,0 +1,158 @@
+@use "./mixins.scss" as *;
+@use "./functions.scss" as *;
+@use "./queries.scss" as *;
+@use "./vars.scss" as *;
+@use "./type.scss" as *;
+
+#__next {
+  height: 100%;
+}
+
+:root {
+  --html-font-size: #{$html-font-size};
+  --html-line-height: #{$html-line-height};
+  --html-line-height: #{$html-line-height};
+
+  --font-family: #{$fontFamily};
+
+  --color-white: #{$color-white};
+  --color-lightest-gray: #{$color-lightest-gray};
+  --color-lighter-gray: #{$color-lighter-gray};
+  --color-light-gray: #{$color-light-gray};
+  --color-gray: #{$color-gray};
+  --color-dark-gray: #{$color-dark-gray};
+  --color-darker-gray: #{$color-darker-gray};
+  --color-darkest-gray: #{$color-darkest-gray};
+  --color-almost-black: #{$color-almost-black};
+  --color-black: #{$color-black};
+  --color-html: #{$color-almost-black};
+  --color-html-bg: #{$color-white};
+  --color-cream: #{$color-cream};
+  --color-blue: #{color-blue};
+
+  --breakpoint-s-width: #{$breakpoint-s-width};
+  --breakpoint-m-width: #{$breakpoint-m-width};
+  --breakpoint-l-width: #{$breakpoint-l-width};
+  --breakpoint-xl-width: #{$breakpoint-xl-width};
+
+  --modal-trans-time: #{$modal-trans-time};
+  --default-trans-time: #{$default-trans-time};
+  --slider-trans-time: #{$slider-trans-time};
+  --page-trans-time: #{$page-trans-time};
+
+  --mobile-gutter: #{$mobile-gutter};
+  --desktop-gutter: #{$desktop-gutter};
+
+  --modal-z-index: #{$modal-z-index};
+
+  --stroke-width: #{$stroke-width};
+  --stroke-width-bold: #{$stroke-width-bold};
+
+  --shadow-1: #{$shadow-1};
+  --shadow-2: #{$shadow-2};
+
+  --col-gap: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  background-color: #16151d;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(90deg, #16151d 21px,transparent 1%) 50%,linear-gradient(#16151d 21px,transparent 1%) 50%, #333;
+  background-size: 22px 22px;
+}
+
+html {
+  background-color: var(--color-html-bg);
+  color: var(--color-html);
+  font-family: $fontFamily;
+  font-size: calc(#{var(--html-font-size)} * 1px);
+  line-height: calc(#{var(--html-line-height)} * 1px);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  font-variant-ligatures: none;
+
+  @include mid-break {
+    @at-root {
+      :root {
+        --html-font-size: #{$html-font-size-mobile};
+        --html-line-height: #{$html-line-height-mobile};
+      }
+    }
+  }
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+p {
+  @include p;
+}
+
+ul {
+  @include ul;
+}
+
+li {
+  @include li;
+}
+
+small {
+  font-size: 75%;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid currentColor;
+  margin: 0;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 14px !important;
+}
+
+input,
+textarea,
+select {
+  margin: 0;
+}
+
+svg {
+  path,
+  circle,
+  line {
+    vector-effect: non-scaling-stroke;
+  }
+}

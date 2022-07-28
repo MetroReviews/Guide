@@ -1,0 +1,47 @@
+@use "@scss/common" as *;
+
+.codeBlock {
+  position: relative;
+
+  &:hover {
+    &:local() {
+      .icon {
+        display: flex;
+      }
+    }
+  }
+
+  @include mid-break {
+    &:hover {
+      &:local() {
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.pre {
+  background: var(--color-lightest-gray) !important;
+  padding: base(1) !important;
+  margin: 0 !important;
+  border: var(--color-lighter-gray) 1px solid !important;
+}
+
+.darkMode {
+  background: var(--color-darkest-gray) !important;
+  border: var(--color-dark-gray) 1px solid !important;
+}
+
+.icon {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: base(0.5);
+  right: base(0.5);
+
+  @include mid-break {
+    display: none;
+  }
+}

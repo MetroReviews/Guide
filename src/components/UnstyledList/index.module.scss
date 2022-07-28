@@ -1,0 +1,14 @@
+@use "@scss/common" as *;
+
+.list {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.item {
+  padding: none;
+  margin-bottom: 0;
+}

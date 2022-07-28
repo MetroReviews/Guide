@@ -1,0 +1,53 @@
+@use "@scss/common" as *;
+
+.icon {
+  width: base(0.5);
+  height: base(0.5);
+  overflow: visible;
+}
+
+.stroke {
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke: currentColor;
+}
+
+.fill {
+  fill: currentColor;
+}
+
+.small {
+  width: base(0.25);
+  height: base(0.25);
+
+  @include mid-break {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.large {
+  height: base();
+  width: base();
+}
+
+.huge {
+  height: base(3);
+  width: base(3);
+}
+
+.bold {
+  &:local() {
+    .stroke {
+      stroke-width: var(--stroke-width-bold);
+    }
+  }
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.black {
+  color: var(--color-almost-black);
+}
