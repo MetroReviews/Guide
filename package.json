@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@faceless-ui/collapsibles": "^1.0.5",
+    "@faceless-ui/collapsibles": "^1.1.1",
     "@faceless-ui/css-grid": "^1.0.9",
     "@faceless-ui/jumplist": "^1.0.9",
     "@faceless-ui/modal": "^1.1.8",

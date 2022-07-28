@@ -53,10 +53,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@faceless-ui/collapsibles@^1.0.5":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@faceless-ui/collapsibles/-/collapsibles-1.1.0.tgz#384ff027e21926f1caa1398b9a901dbbaaf7e6dc"
-  integrity sha512-1A7LK0EGYEgeObqJzet2j8RenWcDUgRFsM6knAUkdP9mzuOWTSmrIJN+lVZBL5LmdBw/NTCiPpiHxD3GjyvkwA==
+"@faceless-ui/collapsibles@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@faceless-ui/collapsibles/-/collapsibles-1.1.1.tgz#89b86e11eceae55ed87caa4de9d395f7b082a938"
+  integrity sha512-7tU5CjXUnW7bKthpMgNKs5TirTb+DQVFASnstqlpe+gXl8W76Rq4Z9m6nS3PnnG2B5h9aqtUVaNgroLc1J+i/w==
   dependencies:
     react-animate-height "^2.0.16"
     react-transition-group "^4.4.2"
