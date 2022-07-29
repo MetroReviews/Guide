@@ -1,4 +1,4 @@
-import { Notifications, Notification } from '.';
+import { Notifications, Notification } from '.'
 
 type AddNotification = {
   type?: 'ADD_NOTIFICATION'
@@ -12,36 +12,31 @@ type DeleteNotification = {
   }
 }
 
-type Action = (
-  AddNotification |
-  DeleteNotification
-)
+type Action = AddNotification | DeleteNotification
 
 export const reducer = (state: Notifications, action: Action): Notifications => {
-  let reducedState = { ...state };
+  let reducedState = { ...state }
   const {
     type,
     payload,
-    payload: {
-      id
-    }
-  } = action;
+    payload: { id },
+  } = action
 
   switch (type) {
     case 'ADD_NOTIFICATION': {
-      if (id) reducedState[id] = payload;
-      break;
+      if (id) reducedState[id] = payload
+      break
     }
     case 'DELETE_NOTIFICATION': {
       if (payload) {
-        if (id && id in reducedState) delete reducedState[id];
+        if (id && id in reducedState) delete reducedState[id]
       }
-      break;
+      break
     }
     default: {
-      break;
+      break
     }
   }
 
-  return reducedState;
-};
+  return reducedState
+}

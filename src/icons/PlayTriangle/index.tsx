@@ -1,16 +1,12 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const PlayTriangle: React.FC<{
   color?: string
   size?: string
   bold?: boolean
 }> = (props) => {
-  const {
-    color,
-    size,
-    bold
-  } = props;
+  const { color, size, bold } = props
 
   return (
     <svg
@@ -18,8 +14,10 @@ export const PlayTriangle: React.FC<{
         classes.icon,
         color && classes[color],
         size && classes[size],
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       width="100%"
       height="100%"
       viewBox="0 0 11 12"
@@ -36,5 +34,5 @@ export const PlayTriangle: React.FC<{
         fill={color}
       />
     </svg>
-  );
-};
+  )
+}

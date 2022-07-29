@@ -1,20 +1,14 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const ArrowIcon: React.FC<{
-  rotation?: number,
+  rotation?: number
   color?: string
   size?: string
   className?: string
   bold?: boolean
 }> = (props) => {
-  const {
-    color,
-    rotation,
-    size,
-    className,
-    bold
-  } = props;
+  const { color, rotation, size, className, bold } = props
 
   return (
     <svg
@@ -27,19 +21,21 @@ export const ArrowIcon: React.FC<{
         classes.icon,
         color && classes[color],
         size && classes[size],
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       style={{
-        transform: rotation ? `rotate(${rotation}deg)` : undefined
+        transform: rotation ? `rotate(${rotation}deg)` : undefined,
       }}
     >
       <path
-        d="M15.1473 1.97986L26 12.8325L15.1473 23.6852"
-        className={classes.stroke}
+d="M15.1473 1.97986L26 12.8325L15.1473 23.6852"
+className={classes.stroke}
       />
       <path
-        d="M24.73 12.8333L1.17737 12.8333"
-        className={classes.stroke}
+d="M24.73 12.8333L1.17737 12.8333"
+className={classes.stroke}
       />
     </svg>
   )

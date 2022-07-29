@@ -1,16 +1,12 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const SearchIcon: React.FC<{
   color?: string
   size?: string
   bold?: boolean
 }> = (props) => {
-  const {
-    color,
-    size,
-    bold
-  } = props;
+  const { color, size, bold } = props
 
   return (
     <svg
@@ -22,14 +18,16 @@ export const SearchIcon: React.FC<{
         classes.icon,
         color && classes[color],
         size && classes[size],
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       <circle
-        cx="9.19111"
-        cy="8.30634"
-        r="7.20478"
-        className={classes.stroke}
+cx="9.19111"
+cy="8.30634"
+r="7.20478"
+className={classes.stroke}
       />
       <line
         x1="14.9044"

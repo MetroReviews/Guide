@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const Check: React.FC<{
   className?: string
@@ -7,12 +7,7 @@ export const Check: React.FC<{
   size?: string
   bold?: boolean
 }> = (props) => {
-  const {
-    color,
-    size,
-    className,
-    bold
-  } = props;
+  const { color, size, className, bold } = props
 
   return (
     <svg
@@ -24,8 +19,10 @@ export const Check: React.FC<{
         classes.icon,
         color && classes[color],
         size && classes[size],
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       <path
         d="M10.6092 16.0192L17.6477 8.98076"
@@ -40,5 +37,5 @@ export const Check: React.FC<{
         strokeLinejoin="bevel"
       />
     </svg>
-  );
+  )
 }

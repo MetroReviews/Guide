@@ -1,6 +1,6 @@
-import { InlineCode } from '@components/InlineCode';
-import React, { Fragment } from 'react';
-import classes from './index.module.scss';
+import { InlineCode } from '@components/InlineCode'
+import React, { Fragment } from 'react'
+import classes from './index.module.scss'
 
 export const PropName: React.FC<{
   name?: string
@@ -9,35 +9,23 @@ export const PropName: React.FC<{
   required?: boolean
   isContextProp?: boolean
 }> = (props) => {
-  const {
-    name,
-    type,
-    id,
-    required,
-    isContextProp
-  } = props;
+  const { name, type, id, required, isContextProp } = props
 
   return (
     <div
-      className={classes.propName}
-      id={id || name}
+className={classes.propName}
+id={id || name}
     >
-      <InlineCode>
-        {`${name}${required ? '*' : ''}`}
-      </InlineCode>
+      <InlineCode>{`${name}${required ? '*' : ''}`}</InlineCode>
       {type && (
         <div className={classes.propType}>
-          &nbsp;
-          :
-          &nbsp;
+          &nbsp; : &nbsp;
           {type}
         </div>
       )}
       {!isContextProp && (
         <Fragment>
-          &nbsp;
-          |
-          &nbsp;
+          &nbsp; | &nbsp;
           {required ? 'required' : 'optional'}
         </Fragment>
       )}

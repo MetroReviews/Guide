@@ -1,8 +1,8 @@
-import { Hyperlink } from '@components/Hyperlink';
-import React, { useCallback } from 'react';
-import classes from './index.module.scss';
-import { copyToClipboard } from '@root/utilities/copyToClipboard';
-import { useNotifications } from '@root/providers/Notifications';
+import { Hyperlink } from '@components/Hyperlink'
+import React, { useCallback } from 'react'
+import classes from './index.module.scss'
+import { copyToClipboard } from '@root/utilities/copyToClipboard'
+import { useNotifications } from '@root/providers/Notifications'
 
 export const Heading: React.FC<{
   element?: keyof JSX.IntrinsicElements
@@ -24,15 +24,15 @@ export const Heading: React.FC<{
     marginBottom,
     copyToClipboard: textToCopy,
     id,
-    href
-  } = props;
+    href,
+  } = props
 
-  const { setNotification } = useNotifications();
+  const { setNotification } = useNotifications()
 
   const onCopy = useCallback(() => {
     setNotification({
       id: 'copied',
-      message: 'Copied to clipboard!'
+      message: 'Copied to clipboard!',
     })
   }, [setNotification])
 
@@ -42,30 +42,28 @@ export const Heading: React.FC<{
     margin === false && classes.noMargin,
     marginTop === false && classes.noMarginTop,
     marginBottom === false && classes.noMarginBottom,
-    textToCopy && classes.canCopy
-  ].filter(Boolean).join(' ');
+    textToCopy && classes.canCopy,
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   if (href) {
     return (
       <Element
-        id={id}
-        className={classList}
+id={id}
+className={classList}
       >
         <Hyperlink
           href={href}
           underline={false}
           onClick={() => {
             if (textToCopy) {
-              copyToClipboard(textToCopy, onCopy);
+              copyToClipboard(textToCopy, onCopy)
             }
           }}
           className={classes.headingAnchor}
         >
-          {textToCopy && (
-            <span className={classes.hashMark}>
-              #
-            </span>
-          )}
+          {textToCopy && <span className={classes.hashMark}>#</span>}
           {children}
         </Hyperlink>
       </Element>
@@ -74,8 +72,8 @@ export const Heading: React.FC<{
 
   return (
     <Element
-      id={id}
-      className={classList}
+id={id}
+className={classList}
     >
       {children}
     </Element>

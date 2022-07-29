@@ -1,11 +1,11 @@
-import { Hyperlink } from '@components/Hyperlink';
-import { ArrowIcon } from '@root/icons/Arrow';
-import { useDarkMode } from '@root/providers/DarkMode';
-import React from 'react';
-import classes from './index.module.scss';
+import { Hyperlink } from '@components/Hyperlink'
+import { ArrowIcon } from '@root/icons/Arrow'
+import { useDarkMode } from '@root/providers/DarkMode'
+import React from 'react'
+import classes from './index.module.scss'
 
 export type ButtonProps = {
-  className?: string,
+  className?: string
   anchorClassName?: string
   href?: string
   label?: string
@@ -33,25 +33,27 @@ export const Button: React.FC<ButtonProps> = (props) => {
     onMouseLeave,
     onClick,
     type,
-    newTab
-  } = props;
+    newTab,
+  } = props
 
-  const { isDark } = useDarkMode();
+  const { isDark } = useDarkMode()
 
   const classList = [
     className,
     classes.button,
     appearance && classes[`type--${appearance}`],
     size && classes[`size--${size}`],
-    isDark && classes.isDark
-  ].filter(Boolean).join(' ')
+    isDark && classes.isDark,
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   if (type === 'submit' || type === 'button') {
     return (
       <button
-        className={classList}
-        type={type}
-        onClick={onClick}
+className={classList}
+type={type}
+onClick={onClick}
       >
         <span className={classes.contents}>
           {label}
@@ -70,10 +72,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
       <Hyperlink
         underline={false}
         href={href}
-        className={[
-          classes.contents,
-          anchorClassName
-        ].filter(Boolean).join(' ')}
+        className={[classes.contents, anchorClassName].filter(Boolean).join(' ')}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         onClick={onClick}

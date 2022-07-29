@@ -1,5 +1,5 @@
-import React from 'react';
-import { Cell, Grid } from '@faceless-ui/css-grid';
+import React from 'react'
+import { Cell, Grid } from '@faceless-ui/css-grid'
 import classes from './index.module.scss'
 
 // places two columns onto each side of its children,
@@ -13,36 +13,25 @@ export const BlockContainer: React.FC<{
   onMouseLeave?: () => void
   children: React.ReactNode
 }> = (props) => {
-  const {
-    id,
-    children,
-    className,
-    cellClassName,
-    style,
-    onMouseEnter,
-    onMouseLeave
-  } = props;
+  const { id, children, className, cellClassName, style, onMouseEnter, onMouseLeave } = props
 
   return (
     <Grid
       id={id}
-      className={[
-        classes.blockContainer,
-        className
-      ].filter(Boolean).join(' ')}
+      className={[classes.blockContainer, className].filter(Boolean).join(' ')}
       style={style}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <Cell
-        className={cellClassName}
-        start={2}
-        cols={12}
-        colsM={8}
-        startM={1}
+className={cellClassName}
+start={2}
+cols={12}
+colsM={8}
+startM={1}
       >
         {children}
       </Cell>
     </Grid>
-  );
-};
+  )
+}

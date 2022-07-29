@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const Chevron: React.FC<{
   className?: string
@@ -8,13 +8,7 @@ export const Chevron: React.FC<{
   size?: string
   bold?: boolean
 }> = (props) => {
-  const {
-    color,
-    rotation,
-    size,
-    className,
-    bold
-  } = props;
+  const { color, rotation, size, className, bold } = props
 
   return (
     <svg
@@ -26,15 +20,17 @@ export const Chevron: React.FC<{
         classes.icon,
         color && classes[color],
         size && classes[size],
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       style={{
-        transform: rotation ? `rotate(${rotation}deg)` : undefined
+        transform: rotation ? `rotate(${rotation}deg)` : undefined,
       }}
     >
       <path
-        className={classes.stroke}
-        d="M8.50586 6.32031L5.00586 2.32031L1.50586 6.32031"
+className={classes.stroke}
+d="M8.50586 6.32031L5.00586 2.32031L1.50586 6.32031"
       />
     </svg>
   )

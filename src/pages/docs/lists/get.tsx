@@ -19,10 +19,11 @@ const NodeSDKDoc = () => {
       >
         Endpoint
       </Heading>
-      <Margin bottom="small">
+      <Margin bottom="xs">
         <Endpoint
 type="GET"
 path="list/:listID"
+auth="no"
         />
       </Margin>
 

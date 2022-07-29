@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { Doc } from '@root/layout/Doc'
 import Margin from '@components/Margin'
-import { Hyperlink } from '@components/Hyperlink'
 import { Heading } from '@components/Heading'
 import { InlineCode } from '@components/InlineCode'
 import Endpoint from '@components/Endpoint'

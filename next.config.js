@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   reactStrictMode: true,
   webpack: (config) => {
-    const configCopy = { ...config };
+    const configCopy = { ...config }
     configCopy.resolve.alias = {
       ...config.resolve.alias,
       '@components': path.resolve(__dirname, './src/components/'),
@@ -14,18 +14,18 @@ module.exports = {
       // IMPORTANT: the next lines are for development only
       // keep them commented out unless actively developing local react modules
       //  "@faceless-ui/grid": path.resolve(__dirname, "../../faceless-ui/grid"),
-      react: path.join(__dirname, "node_modules/react"),
-      "react-dom": path.join(__dirname, "node_modules/react-dom")
-    };
+      react: path.join(__dirname, 'node_modules/react'),
+      'react-dom': path.join(__dirname, 'node_modules/react-dom'),
+    }
 
-    return configCopy;
+    return configCopy
   },
   extensions: ['.js', '.jsx', '.ts', '.tsx'],
-  redirects: async () => ([
+  redirects: async () => [
     {
       source: '/docs',
       destination: '/docs/getting-started',
-      permanent: false
-    }
-  ])
+      permanent: false,
+    },
+  ],
 }
