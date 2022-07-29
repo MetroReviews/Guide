@@ -1,59 +1,54 @@
-import { CopyIcon } from '@root/icons/Copy';
-import { useDarkMode } from '@root/providers/DarkMode';
-import { useNotifications } from '@root/providers/Notifications';
-import { copyToClipboard } from '@root/utilities/copyToClipboard';
-import React, { useCallback, useEffect, useState } from 'react';
-import classes from './index.module.scss';
+import { CopyIcon } from '@root/icons/Copy'
+import { useDarkMode } from '@root/providers/DarkMode'
+import { useNotifications } from '@root/providers/Notifications'
+import { copyToClipboard } from '@root/utilities/copyToClipboard'
+import React, { useCallback, useEffect, useState } from 'react'
+import classes from './index.module.scss'
 
 export const InstallationCode: React.FC<{
   name?: string
 }> = (props) => {
-  const { name } = props;
-  const { isDark } = useDarkMode();
-  const [manager, setManager] = useState<'npm' | 'yarn'>('yarn');
+  const { name } = props
+  const { isDark } = useDarkMode()
+  const [manager, setManager] = useState<'npm' | 'yarn'>('yarn')
 
-  let command = `npm i @faceless-ui/${name}`;
-  if (manager === 'yarn') command = `yarn add @faceless-ui/${name}`
+  let command = `npm i ${name}`
+  if (manager === 'yarn') command = `yarn add ${name}`
 
-  const { setNotification } = useNotifications();
+  const { setNotification } = useNotifications()
 
   const onCopy = useCallback(() => {
     setNotification({
       id: 'copied',
-      message: 'Copied to clipboard!'
+      message: 'Copied to clipboard!',
     })
   }, [setNotification])
 
   useEffect(() => {
-    const preferredPkgManager = localStorage.getItem('preferredPkgManager');
+    const preferredPkgManager = localStorage.getItem('preferredPkgManager')
     if (preferredPkgManager === 'npm') setManager('npm')
     if (preferredPkgManager === 'yarn') setManager('yarn')
   }, [])
 
   useEffect(() => {
     if (manager) {
-      localStorage.setItem('preferredPkgManager', manager);
+      localStorage.setItem('preferredPkgManager', manager)
     }
   }, [manager])
 
   return (
     <div
-      className={[
-        classes.installationCode,
-        isDark && classes.darkMode
-      ].filter(Boolean).join(' ')}
+      className={[classes.installationCode, isDark && classes.darkMode].filter(Boolean).join(' ')}
     >
       <div
         className={classes.codeBlockWrapper}
         onClick={() => {
-          copyToClipboard(command, onCopy);
+          copyToClipboard(command, onCopy)
         }}
       >
-        <div className={classes.codeBlock}        >
+        <div className={classes.codeBlock}>
           <pre className={classes.pre}>
-            <code className={classes.code}>
-              {command}
-            </code>
+            <code className={classes.code}>{command}</code>
           </pre>
         </div>
         <div className={classes.icon}>
@@ -65,20 +60,20 @@ export const InstallationCode: React.FC<{
           <button
             className={classes.managerButton}
             onClick={() => {
-              setManager('yarn');
+              setManager('yarn')
             }}
           >
-            I use yarn
+            Switch to yarn
           </button>
         )}
         {manager === 'yarn' && (
           <button
             className={classes.managerButton}
             onClick={() => {
-              setManager('npm');
+              setManager('npm')
             }}
           >
-            I use npm
+            Switch to npm
           </button>
         )}
       </div>
