@@ -23,13 +23,7 @@ export const BlockContainer: React.FC<{
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Cell
-className={cellClassName}
-start={2}
-cols={12}
-colsM={8}
-startM={1}
-      >
+      <Cell className={cellClassName} start={2} cols={12} colsM={8} startM={1}>
         {children}
       </Cell>
     </Grid>

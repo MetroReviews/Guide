@@ -25,11 +25,7 @@ const GettingStartedDoc = () => {
           Get Bot
         </Heading>
         <p>Get the specified bot based on its Discord Client Snowflake/Bot ID</p>
-        <Endpoint
-type="GET"
-path="/bots/:bot_id"
-auth="no"
-        />
+        <Endpoint type="GET" path="/bots/:bot_id" auth="no" />
         <div>
           <Heading
             id="get_bot_res"

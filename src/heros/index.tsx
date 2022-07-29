@@ -15,23 +15,12 @@ export const MainHero: React.FC = () => {
     <BlockContainer>
       <div className={classes.mainHero}>
         <Grid>
-          <Cell
-cols={10}
-colsL={12}
-colsM={12}>
+          <Cell cols={10} colsL={12} colsM={12}>
             <Margin bottom="small">
-              <Heading
-element="h2"
-as="jumbo"
-marginTop={false}
-              >
+              <Heading element="h2" as="jumbo" marginTop={false}>
                 Metro Reviews
               </Heading>
-              <Heading
-element="h1"
-as="h5"
-marginBottom={false}
-              >
+              <Heading element="h1" as="h5" marginBottom={false}>
                 The Dedicated Community for Discord Bot Lists
               </Heading>
             </Margin>

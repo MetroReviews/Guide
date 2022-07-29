@@ -27,10 +27,7 @@ export const GoogleAnalytics: React.FC = () => {
   if (gaID) {
     return (
       <Fragment>
-        <Script
-strategy="lazyOnload"
-src={`https://www.googletagmanager.com/gtag/js?id=${gaID}`}
-        />
+        <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${gaID}`} />
         <Script
           strategy="lazyOnload"
           id="gtag-script"

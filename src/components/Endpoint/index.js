@@ -83,10 +83,7 @@ export default function HTTPHeader({ type, path, auth }) {
         />
         {auth === 'yes' && <p className={classes.note}>🔒</p>}
       </Header>
-      <CopyToClipboard
-text={fullUrl}
-onCopy={() => setCopy(true)}
-      >
+      <CopyToClipboard text={fullUrl} onCopy={() => setCopy(true)}>
         <CopyButton method={type}>{copied ? 'Copied!' : 'Copy URL'}</CopyButton>
       </CopyToClipboard>
     </HeaderWrapper>

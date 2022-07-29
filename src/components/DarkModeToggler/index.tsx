@@ -5,10 +5,7 @@ export const DarkModeToggler: React.FC = () => {
   const { isDark, setIsDark } = useDarkMode()
 
   return (
-    <button
-className={classes.darkModeToggler}
-onClick={() => setIsDark(!isDark)}
-    >
+    <button className={classes.darkModeToggler} onClick={() => setIsDark(!isDark)}>
       {isDark ? 'Dark' : 'Dark'}
       &nbsp; Mode
     </button>

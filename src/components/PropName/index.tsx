@@ -12,10 +12,7 @@ export const PropName: React.FC<{
   const { name, type, id, required, isContextProp } = props
 
   return (
-    <div
-className={classes.propName}
-id={id || name}
-    >
+    <div className={classes.propName} id={id || name}>
       <InlineCode>{`${name}${required ? '*' : ''}`}</InlineCode>
       {type && (
         <div className={classes.propType}>

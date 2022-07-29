@@ -11,10 +11,7 @@ const CodeTag: React.FC<{
   const { isDark } = useDarkMode()
 
   return (
-    <code
-id={id}
-className={[classes.code, isDark && classes.darkMode].filter(Boolean).join(' ')}
-    >
+    <code id={id} className={[classes.code, isDark && classes.darkMode].filter(Boolean).join(' ')}>
       {children}
     </code>
   )
@@ -31,11 +28,7 @@ export const InlineCode: React.FC<
   if (href) {
     return (
       <CodeTag id={id}>
-        <Hyperlink
-href={href}
-underline={Boolean(href)}
-{...rest}
-        >
+        <Hyperlink href={href} underline={Boolean(href)} {...rest}>
           {children}
         </Hyperlink>
       </CodeTag>

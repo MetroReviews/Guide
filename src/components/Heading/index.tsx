@@ -49,10 +49,7 @@ export const Heading: React.FC<{
 
   if (href) {
     return (
-      <Element
-id={id}
-className={classList}
-      >
+      <Element id={id} className={classList}>
         <Hyperlink
           href={href}
           underline={false}
@@ -71,10 +68,7 @@ className={classList}
   }
 
   return (
-    <Element
-id={id}
-className={classList}
-    >
+    <Element id={id} className={classList}>
       {children}
     </Element>
   )

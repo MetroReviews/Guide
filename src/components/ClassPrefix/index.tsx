@@ -8,10 +8,7 @@ export const ClassPrefix: React.FC<{
 
   return (
     <div id={id}>
-      <PropName
-name="classPrefix"
-type="string"
-      />
+      <PropName name="classPrefix" type="string" />
       <p>
         {`Prepends onto onto every generated class name, useful for unique name-spacing within complex stylesheets.`}
       </p>

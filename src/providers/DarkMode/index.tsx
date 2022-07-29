@@ -48,10 +48,7 @@ const DarkModeProvider: React.FC<{
 
   return (
     <Fragment>
-      <Script
-strategy="beforeInteractive"
-src="/initDarkMode.js"
-      />
+      <Script strategy="beforeInteractive" src="/initDarkMode.js" />
       <DarkModeContext.Provider
         value={{
           isDark,

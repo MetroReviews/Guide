@@ -9,11 +9,7 @@ export const EditOnGitHub: React.FC<{
 
   return (
     <div className={classes.editOnGitHub}>
-      <Hyperlink
-href={href}
-newTab
-underline
-      >
+      <Hyperlink href={href} newTab underline>
         Edit this page on GitHub
       </Hyperlink>
     </div>

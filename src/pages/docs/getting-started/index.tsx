@@ -39,10 +39,7 @@ const GettingStartedDoc = () => {
         </Heading>
         <p>
           Before any Bot List receives full access to our API they will need to{' '}
-          <Hyperlink
-href="https://metrobots.xyz/lists/apply"
-newTab
-          >
+          <Hyperlink href="https://metrobots.xyz/lists/apply" newTab>
             Apply
           </Hyperlink>{' '}
           Once approved they will be provided with a List Key which is used to access and
@@ -61,10 +58,7 @@ newTab
         <p>
           If you need any assistance using our setting up our API please feel free to reach out to
           us in our{' '}
-          <Hyperlink
-href="https://metrobots.xyz/discord"
-newTab
-          >
+          <Hyperlink href="https://metrobots.xyz/discord" newTab>
             Discord Server
           </Hyperlink>{' '}
         </p>

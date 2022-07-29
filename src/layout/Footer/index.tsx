@@ -13,39 +13,24 @@ export const Footer: React.FC = () => {
             &nbsp;&copy;&nbsp;
             {`${new Date().getFullYear()}`}
             &nbsp;
-            <Hyperlink
-href="https://infinitydev.team/"
-underline={false}
-            >
+            <Hyperlink href="https://infinitydev.team/" underline={false}>
               Infinity Development
             </Hyperlink>
           </div>
           <menu className={classes.menu}>
             <div></div>
             <div>
-              <Hyperlink
-newTab
-href="https://twitter.com/Metro_Reviews"
-underline={false}
-              >
+              <Hyperlink newTab href="https://twitter.com/Metro_Reviews" underline={false}>
                 Twitter
               </Hyperlink>
             </div>
             <div>
-              <Hyperlink
-newTab
-href="https://github.com/MetroReviews"
-underline={false}
-              >
+              <Hyperlink newTab href="https://github.com/MetroReviews" underline={false}>
                 GitHub
               </Hyperlink>
             </div>
             <div>
-              <Hyperlink
-newTab
-href="https://metrobots.xyz/discord"
-underline={false}
-              >
+              <Hyperlink newTab href="https://metrobots.xyz/discord" underline={false}>
                 Discord
               </Hyperlink>
             </div>

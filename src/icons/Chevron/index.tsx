@@ -28,10 +28,7 @@ export const Chevron: React.FC<{
         transform: rotation ? `rotate(${rotation}deg)` : undefined,
       }}
     >
-      <path
-className={classes.stroke}
-d="M8.50586 6.32031L5.00586 2.32031L1.50586 6.32031"
-      />
+      <path className={classes.stroke} d="M8.50586 6.32031L5.00586 2.32031L1.50586 6.32031" />
     </svg>
   )
 }

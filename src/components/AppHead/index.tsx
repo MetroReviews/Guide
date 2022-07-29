@@ -5,10 +5,7 @@ export const AppHead: React.FC = () => {
   return (
     <NextHead>
       <title>Faceless UI</title>
-      <link
-rel="icon"
-href="https://metrobots.xyz/img/logo.webp"
-      />
+      <link rel="icon" href="https://metrobots.xyz/img/logo.webp" />
     </NextHead>
   )
 }

@@ -56,20 +56,14 @@ export const Hyperlink: React.FC<HyperlinkProps> = (props) => {
   if (href) {
     if (!newTab) {
       return (
-        <Link
-href={href}
-scroll={false}
-        >
+        <Link href={href} scroll={false}>
           <a {...sharedProps}>{children}</a>
         </Link>
       )
     }
 
     return (
-      <a
-href={href}
-{...sharedProps}
-      >
+      <a href={href} {...sharedProps}>
         {children}
       </a>
     )

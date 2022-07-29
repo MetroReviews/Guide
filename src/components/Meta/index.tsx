@@ -21,31 +21,17 @@ const Meta: React.FC<{
       {title && (
         <Fragment>
           <title>{title}</title>
-          <meta
-property="og:title"
-content={title}
-          />
+          <meta property="og:title" content={title} />
         </Fragment>
       )}
       {description && (
         <Fragment>
-          <meta
-name="description"
-content={description}
-          />
-          <meta
-property="og:description"
-content={description}
-          />
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
         </Fragment>
       )}
-      {image && <meta
-property="og:image"
-content={`https://metrobots.xyz/img/logo.webp`}
-                />}
-      {keywords && <meta
-name="keywords"
-content={keywords} />}
+      {image && <meta property="og:image" content={`https://metrobots.xyz/img/logo.webp`} />}
+      {keywords && <meta name="keywords" content={keywords} />}
     </NextHead>
   )
 }

@@ -37,10 +37,7 @@ export const RecursiveNav: React.FC<{
 
             if (type === 'title') {
               return (
-                <div
-key={index}
-className={classes.title}
-                >
+                <div key={index} className={classes.title}>
                   {label}
                 </div>
               )
@@ -51,12 +48,7 @@ className={classes.title}
               const isActiveLink = Boolean(href && pathWithoutHash === href)
 
               return (
-                <Hyperlink
-underline={false}
-key={index}
-href={href}
-className={classes.link}
-                >
+                <Hyperlink underline={false} key={index} href={href} className={classes.link}>
                   <div
                     className={[
                       classes.itemLabel,
@@ -77,19 +69,12 @@ className={classes.link}
               const isCurrentSection = asPath.startsWith(href || '')
 
               return (
-                <Collapsible
-key={index}
-openOnInit={isCurrentSection}
-open={isCurrentSection}
-                >
+                <Collapsible key={index} openOnInit={isCurrentSection} open={isCurrentSection}>
                   {/* @ts-ignore */}
                   {({ isOpen }) => {
                     return (
                       <div className={classes.group}>
-                        <CollapsibleToggler
-className={classes.toggler}
-disable={isCurrentSection}
-                        >
+                        <CollapsibleToggler className={classes.toggler} disable={isCurrentSection}>
                           <Chevron
                             className={classes.chevron}
                             rotation={isOpen ? 180 : 90}
@@ -127,19 +112,12 @@ disable={isCurrentSection}
               const isCurrentSection = asPath.startsWith(href || '')
 
               return (
-                <Collapsible
-key={index}
-openOnInit={isCurrentSection}
-open={isCurrentSection}
-                >
+                <Collapsible key={index} openOnInit={isCurrentSection} open={isCurrentSection}>
                   {/* @ts-ignore */}
                   {({ isOpen }) => {
                     return (
                       <div className={classes.jumplist}>
-                        <CollapsibleToggler
-className={classes.toggler}
-disable={isCurrentSection}
-                        >
+                        <CollapsibleToggler className={classes.toggler} disable={isCurrentSection}>
                           <Hyperlink
                             underline={false}
                             href={!midBreak ? href : ''} // disable links on mobile, so that the user can dropdown without navigating and having the modal close

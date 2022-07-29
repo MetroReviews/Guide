@@ -23,17 +23,11 @@ const GettingStartedDoc = () => {
           Any Bot List who is interested in enrolling in our services can do so through the
           integrated Bot List Application on our main website. Before applying please make sure that
           your bot list comply&apos;s with rules and requirements listed here:{' '}
-          <Hyperlink
-href="https://metrobots.xyz/lists/rules/reqs"
-newTab
-          >
+          <Hyperlink href="https://metrobots.xyz/lists/rules/reqs" newTab>
             https://metrobots.xyz/lists/rules/reqs
           </Hyperlink>{' '}
           and here:{' '}
-          <Hyperlink
-href="https://metrobots.xyz/lists/rules/eq"
-newTab
-          >
+          <Hyperlink href="https://metrobots.xyz/lists/rules/eq" newTab>
             https://metrobots.xyz/lists/rules/eq
           </Hyperlink>
         </p>

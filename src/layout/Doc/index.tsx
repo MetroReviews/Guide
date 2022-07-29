@@ -20,23 +20,13 @@ export const Doc: React.FC<{
 
   return (
     <Fragment>
-      <Meta
-title={metaTitle + ' - Metro Guide'}
-description={metaDescription}
-      />
+      <Meta title={metaTitle + ' - Metro Guide'} description={metaDescription} />
       <BlockContainer>
         <Grid>
-          <Cell
-cols={3}
-colsM={8}
-className={classes.desktopNav}
-          >
+          <Cell cols={3} colsM={8} className={classes.desktopNav}>
             <DesktopNav />
           </Cell>
-          <Cell
-cols={9}
-colsM={8}
-          >
+          <Cell cols={9} colsM={8}>
             {children}
             <Margin top="small">
               <NextInDocs />
@@ -48,10 +38,7 @@ colsM={8}
             )}
           </Cell>
         </Grid>
-        <MobileNav
-className={classes.mobileNav}
-currentPage={pageName}
-        />
+        <MobileNav className={classes.mobileNav} currentPage={pageName} />
       </BlockContainer>
     </Fragment>
   )

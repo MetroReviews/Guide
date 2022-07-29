@@ -10,10 +10,7 @@ export const StyledList: React.FC<{
     <ul className={classes.list}>
       {items.map((Item, index) => {
         return (
-          <li
-key={index}
-className={classes.item}
-          >
+          <li key={index} className={classes.item}>
             {Item}
           </li>
         )

@@ -11,10 +11,7 @@ export const Card: React.FC<{
   const { href, leader, title, description } = props
 
   return (
-    <Hyperlink
-href={href}
-className={classes.card}
-    >
+    <Hyperlink href={href} className={classes.card}>
       {leader && <div className={classes.leader}>{leader}</div>}
       {title && <h5 className={classes.title}>{title}</h5>}
       {description && <p className={classes.description}>{description}</p>}

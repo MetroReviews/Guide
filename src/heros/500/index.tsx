@@ -12,23 +12,12 @@ export const ErrorHero: React.FC = () => {
     <BlockContainer>
       <div className={classes.mainHero}>
         <Grid>
-          <Cell
-cols={10}
-colsL={12}
-colsM={12}>
+          <Cell cols={10} colsL={12} colsM={12}>
             <Margin bottom="small">
-              <Heading
-element="h2"
-as="jumbo"
-marginTop={false}
-              >
+              <Heading element="h2" as="jumbo" marginTop={false}>
                 500 - Internal Error
               </Heading>
-              <Heading
-element="h1"
-as="h5"
-marginBottom={false}
-              >
+              <Heading element="h1" as="h5" marginBottom={false}>
                 Something went wrong with this request, please try again or contact our Dev Team for
                 support
               </Heading>
@@ -36,16 +25,8 @@ marginBottom={false}
           </Cell>
         </Grid>
         <MarginGrid size="small">
-          <Button
-href="/"
-label="Back Home"
-appearance="primary"
-          />
-          <Button
-href="https://metrobots.xyz/discord"
-label="Get Support"
-appearance="primary"
-          />
+          <Button href="/" label="Back Home" appearance="primary" />
+          <Button href="https://metrobots.xyz/discord" label="Get Support" appearance="primary" />
         </MarginGrid>
       </div>
     </BlockContainer>

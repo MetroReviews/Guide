@@ -9,11 +9,7 @@ export const Header: React.FC = () => {
       <BlockContainer>
         <div className={classes.wrapper}>
           <div className={classes.logo}>
-            <Hyperlink
-href="/"
-underline={false}
-className={classes.logoAnchor}
-            >
+            <Hyperlink href="/" underline={false} className={classes.logoAnchor}>
               <img
                 className={classes.logoImage}
                 src="https://metrobots.xyz/img/logo.webp"
@@ -24,10 +20,7 @@ className={classes.logoAnchor}
           </div>
           <menu className={classes.menu}>
             <div>
-              <Hyperlink
-href="/docs/getting-started"
-underline={false}
-              >
+              <Hyperlink href="/docs/getting-started" underline={false}>
                 Docs
               </Hyperlink>
             </div>

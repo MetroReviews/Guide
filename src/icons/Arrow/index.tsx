@@ -29,14 +29,8 @@ export const ArrowIcon: React.FC<{
         transform: rotation ? `rotate(${rotation}deg)` : undefined,
       }}
     >
-      <path
-d="M15.1473 1.97986L26 12.8325L15.1473 23.6852"
-className={classes.stroke}
-      />
-      <path
-d="M24.73 12.8333L1.17737 12.8333"
-className={classes.stroke}
-      />
+      <path d="M15.1473 1.97986L26 12.8325L15.1473 23.6852" className={classes.stroke} />
+      <path d="M24.73 12.8333L1.17737 12.8333" className={classes.stroke} />
     </svg>
   )
 }

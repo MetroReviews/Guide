@@ -21,10 +21,7 @@ export const TextWithInlineIcon: React.FC<{
             const isLast = index === words.length - 1
 
             return (
-              <span
-key={index}
-className={classes.span}
-              >
+              <span key={index} className={classes.span}>
                 {!isLast ? (
                   <Fragment>
                     {word}

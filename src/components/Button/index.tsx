@@ -50,11 +50,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
 
   if (type === 'submit' || type === 'button') {
     return (
-      <button
-className={classList}
-type={type}
-onClick={onClick}
-      >
+      <button className={classList} type={type} onClick={onClick}>
         <span className={classes.contents}>
           {label}
           {arrow && (

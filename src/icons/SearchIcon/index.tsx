@@ -23,12 +23,7 @@ export const SearchIcon: React.FC<{
         .filter(Boolean)
         .join(' ')}
     >
-      <circle
-cx="9.19111"
-cy="8.30634"
-r="7.20478"
-className={classes.stroke}
-      />
+      <circle cx="9.19111" cy="8.30634" r="7.20478" className={classes.stroke} />
       <line
         x1="14.9044"
         y1="13.859"

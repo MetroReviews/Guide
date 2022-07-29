@@ -53,10 +53,7 @@ const FacelessApp = (appProps: AppPropsWithLayout): React.ReactElement => {
             <MouseInfoProvider>
               <NotificationsProvider>
                 <JumplistProvider rootMargin="-100px 0px 0px 0px">
-                  <ModalProvider
-zIndex={99}
-transTime={250}
-                  >
+                  <ModalProvider zIndex={99} transTime={250}>
                     <GridProvider
                       breakpoints={{
                         s: 768,

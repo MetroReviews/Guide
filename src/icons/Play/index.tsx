@@ -23,14 +23,7 @@ export const Play: React.FC<{
       height="100%"
       width="100%"
     >
-      <circle
-className="stroke"
-stroke={color}
-fill="none"
-strokeWidth="2"
-cx="9"
-cy="9"
-r="9" />
+      <circle className="stroke" stroke={color} fill="none" strokeWidth="2" cx="9" cy="9" r="9" />
       <polygon
         className="fill"
         transform="translate(10.000000, 9.000000) rotate(-270.000000) translate(-10.000000, -9.000000)"
