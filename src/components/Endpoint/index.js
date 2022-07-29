@@ -74,7 +74,6 @@ export default function HTTPHeader({ type, path, auth }) {
   const url = path
   return (
     <HeaderWrapper method={type}>
-      {auth === 'yes' ? <p className={classes.note}>🔒</p> : <p className={classes.note}>🔓</p>}
       <Header>
         <MethodName method={type}>{type}</MethodName>
         <EndpointUrl
@@ -82,6 +81,7 @@ export default function HTTPHeader({ type, path, auth }) {
             __html: url.replace(/:[a-z_]+/g, '<b>$&</b>'),
           }}
         />
+        {auth === 'yes' && <p className={classes.note}>🔒</p>}
       </Header>
       <CopyToClipboard
 text={fullUrl}
