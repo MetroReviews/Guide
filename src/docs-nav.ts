@@ -26,6 +26,16 @@ export const nav: DocsNav = [
         href: '/docs/getting-started',
         label: 'Overview',
       },
+      {
+        type: 'overview',
+        href: '/docs/getting-started/endpoints',
+        label: 'Endpoints',
+      },
+      {
+        type: 'overview',
+        href: '/docs/getting-started/faqs',
+        label: "FAQ's",
+      },
     ],
   },
 
@@ -76,7 +86,13 @@ export const nav: DocsNav = [
     href: '/docs/schemas',
     label: 'Schemas',
     versionName: 'metro-api',
-    items: [],
+    items: [
+      {
+        type: 'link',
+        href: '/docs/schemas/bot',
+        label: 'Bot Schema',
+      },
+    ],
   },
 
   /** NODE LIB PAGE LINKS */

@@ -23,7 +23,7 @@ const NodeSDKDoc = () => {
       >
         Key Features
       </Heading>
-      <Margin bottom="xs">
+      <Margin bottom="small">
         <StyledList
           items={[
             <div key={1}>Fetch and Update Bot List Info</div>,

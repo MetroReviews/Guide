@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import classes from './index.module.scss'
 
 const mappings = {
   PATCH: {
@@ -61,7 +62,7 @@ const Header = styled.span`
   align-items: center;
 `
 
-export default function HTTPHeader({ type, path }) {
+export default function HTTPHeader({ type, path, auth }) {
   const [copied, setCopy] = React.useState(false)
   React.useEffect(() => {
     if (copied) {
@@ -73,6 +74,7 @@ export default function HTTPHeader({ type, path }) {
   const url = path
   return (
     <HeaderWrapper method={type}>
+      {auth === 'yes' ? <p className={classes.note}>🔒</p> : <p className={classes.note}>🔓</p>}
       <Header>
         <MethodName method={type}>{type}</MethodName>
         <EndpointUrl

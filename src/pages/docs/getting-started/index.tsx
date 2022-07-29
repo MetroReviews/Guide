@@ -13,7 +13,7 @@ const GettingStartedDoc = () => {
         This site contains basic documentation on the Metro Reviews project As well as its companion
         Website & API, including information on features and tutorials on common use cases.
       </p>
-      <Margin bottom="xs">
+      <Margin bottom="small">
         <Heading
           id="about"
           href="/docs/getting-started#about"

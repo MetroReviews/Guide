@@ -24,7 +24,7 @@ const NodeSDKDoc = () => {
       >
         Key Methods
       </Heading>
-      <Margin bottom="xs">
+      <Margin bottom="small">
         <StyledList
           items={[
             <div key={1}>

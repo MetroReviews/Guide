@@ -23,7 +23,7 @@ const NodeSDKDoc = () => {
       >
         Installation
       </Heading>
-      <Margin bottom="xs">
+      <Margin bottom="small">
         <InstallationCode name="COMING SOON" />
       </Margin>
       <Heading
@@ -34,7 +34,7 @@ const NodeSDKDoc = () => {
       >
         Key features
       </Heading>
-      <Margin bottom="xs">
+      <Margin bottom="small">
         <StyledList
           items={[
             <div key={1}>Fetch and Update Bot List Info</div>,
