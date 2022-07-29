@@ -1,30 +1,24 @@
-import React from 'react';
-import classes from './index.module.scss';
-import { BlockContainer } from '@root/layout/BlockContainer';
-import { Hyperlink } from '@components/Hyperlink';
-import { useCustomCursor } from '@root/providers/CustomCursorProvider';
-import { useDarkMode } from '@root/providers/DarkMode';
+import React from 'react'
+import classes from './index.module.scss'
+import { BlockContainer } from '@root/layout/BlockContainer'
+import { Hyperlink } from '@components/Hyperlink'
+import { useCustomCursor } from '@root/providers/CustomCursorProvider'
+import { useDarkMode } from '@root/providers/DarkMode'
 
 export const CallToAction: React.FC<{
   className?: string
 }> = (props) => {
-  const {
-    className
-  } = props;
+  const { className } = props
 
-  const {
-    setHighlightCursor
-  } = useCustomCursor()
+  const { setHighlightCursor } = useCustomCursor()
 
-  const { isDark } = useDarkMode();
+  const { isDark } = useDarkMode()
 
   return (
     <div
-      className={[
-        className,
-        classes.callToAction,
-        isDark && classes.isDark
-      ].filter(Boolean).join(' ')}
+      className={[className, classes.callToAction, isDark && classes.isDark]
+        .filter(Boolean)
+        .join(' ')}
     >
       <BlockContainer>
         <Hyperlink
@@ -37,13 +31,11 @@ export const CallToAction: React.FC<{
           <div className={classes.background}>
             <div className={classes.backgroundColor} />
           </div>
-          <div className={classes.content} >
-            <div className={classes.title}>
-              Try it out!
-            </div>
+          <div className={classes.content}>
+            <div className={classes.title}>Try it out!</div>
           </div>
         </Hyperlink>
       </BlockContainer>
-    </div >
+    </div>
   )
 }

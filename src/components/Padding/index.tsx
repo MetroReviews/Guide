@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from './index.module.scss';
+import React from 'react'
+import classes from './index.module.scss'
 
 export const Padding: React.FC<{
   top?: 'small' | 'medium' | 'large'
@@ -8,24 +8,15 @@ export const Padding: React.FC<{
   id?: string
   children: React.ReactNode
 }> = (props) => {
-  const {
-    children,
-    top,
-    bottom,
-    style,
-    id
-  } = props;
+  const { children, top, bottom, style, id } = props
 
   return (
     <div
-      className={[
-        classes[`top-${top}`],
-        classes[`bottom-${bottom}`],
-      ].filter(Boolean).join(' ')}
+      className={[classes[`top-${top}`], classes[`bottom-${bottom}`]].filter(Boolean).join(' ')}
       style={style}
       id={id}
     >
       {children}
-    </div >
+    </div>
   )
 }

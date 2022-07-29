@@ -30,11 +30,7 @@ const Home: NextPage = () => {
         <BlockContainer>
           <Margin bottom="large">
             <Grid>
-              <Cell
-cols={8}
-colsL={10}
-colsM={8}
-              >
+              <Cell cols={8} colsL={10} colsM={8}>
                 <h3 style={{ marginTop: 0 }}>Why choose Metro?</h3>
                 <p style={{ marginBottom: 0 }}>
                   We understand the struggle of running a bot list and dealing with its queue

@@ -1,20 +1,13 @@
-import { useDarkMode } from '@root/providers/DarkMode';
-import classes from './index.module.scss';
+import { useDarkMode } from '@root/providers/DarkMode'
+import classes from './index.module.scss'
 
 export const DarkModeToggler: React.FC = () => {
-  const {
-    isDark,
-    setIsDark,
-  } = useDarkMode();
+  const { isDark, setIsDark } = useDarkMode()
 
   return (
-    <button
-      className={classes.darkModeToggler}
-      onClick={() => setIsDark(!isDark)}
-    >
+    <button className={classes.darkModeToggler} onClick={() => setIsDark(!isDark)}>
       {isDark ? 'Dark' : 'Dark'}
-      &nbsp;
-      Mode
+      &nbsp; Mode
     </button>
   )
 }

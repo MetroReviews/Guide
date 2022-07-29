@@ -12,23 +12,12 @@ export const CoffeeHero: React.FC = () => {
     <BlockContainer>
       <div className={classes.mainHero}>
         <Grid>
-          <Cell
-cols={10}
-colsL={12}
-colsM={12}>
+          <Cell cols={10} colsL={12} colsM={12}>
             <Margin bottom="small">
-              <Heading
-element="h2"
-as="jumbo"
-marginTop={false}
-              >
+              <Heading element="h2" as="jumbo" marginTop={false}>
                 🚧 418
               </Heading>
-              <Heading
-element="h1"
-as="h5"
-marginBottom={false}
-              >
+              <Heading element="h1" as="h5" marginBottom={false}>
                 We brewed up some bad coffee this morning and something got broken along the way, it
                 is also likely that this page is under construction and will be available soon
               </Heading>
@@ -36,16 +25,8 @@ marginBottom={false}
           </Cell>
         </Grid>
         <MarginGrid size="small">
-          <Button
-href="/"
-label="Back Home"
-appearance="primary"
-          />
-          <Button
-href="https://metrobots.xyz/discord"
-label="Get Support"
-appearance="primary"
-          />
+          <Button href="/" label="Back Home" appearance="primary" />
+          <Button href="https://metrobots.xyz/discord" label="Get Support" appearance="primary" />
         </MarginGrid>
       </div>
     </BlockContainer>

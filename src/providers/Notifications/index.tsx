@@ -1,13 +1,8 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useReducer,
-} from 'react';
-import { useDarkMode } from '../DarkMode';
+import React, { createContext, useCallback, useContext, useReducer } from 'react'
+import { useDarkMode } from '../DarkMode'
 
-import classes from './index.module.scss';
-import { reducer } from './reducer';
+import classes from './index.module.scss'
+import { reducer } from './reducer'
 
 export type Notification = {
   message?: string
@@ -24,24 +19,20 @@ export interface INotifications {
   notifications: Notifications
 }
 
-export const NotificationsContext = createContext<INotifications>({} as INotifications);
-export const useNotifications = (): INotifications => useContext(NotificationsContext);
+export const NotificationsContext = createContext<INotifications>({} as INotifications)
+export const useNotifications = (): INotifications => useContext(NotificationsContext)
 
 export const NotificationsProvider: React.FC<{
   children?: React.ReactNode
 }> = (props) => {
-  const [notifications, dispatchNotifications] = useReducer(reducer, {});
+  const [notifications, dispatchNotifications] = useReducer(reducer, {})
 
-  const { children } = props;
+  const { children } = props
 
-  const { isDark } = useDarkMode();
+  const { isDark } = useDarkMode()
 
   const setNotification = useCallback((incomingNotification: Notification) => {
-    const {
-      id,
-      message = 'No message provided',
-      duration = 5000,
-    } = incomingNotification;
+    const { id, message = 'No message provided', duration = 5000 } = incomingNotification
 
     // set deletion timer
     const timerID = setTimeout(() => {
@@ -50,8 +41,8 @@ export const NotificationsProvider: React.FC<{
         payload: {
           id,
         },
-      });
-    }, duration);
+      })
+    }, duration)
     // set notification
     dispatchNotifications({
       type: 'ADD_NOTIFICATION',
@@ -60,12 +51,12 @@ export const NotificationsProvider: React.FC<{
         message,
         duration,
       },
-    });
+    })
 
-    return () => clearTimeout(timerID);
-  }, []);
+    return () => clearTimeout(timerID)
+  }, [])
 
-  const notifs = Object.keys(notifications || {});
+  const notifs = Object.keys(notifications || {})
 
   return (
     <NotificationsContext.Provider
@@ -76,25 +67,24 @@ export const NotificationsProvider: React.FC<{
     >
       {children}
       <div className={classes.notificationsContainer}>
-        {Array.isArray(notifs) && notifs.length > 0 && (
+        {Array.isArray(notifs) &&
+          notifs.length > 0 &&
           notifs.map((notif, index) => {
-            const notification = notifications[notif];
-            const { message } = notification;
+            const notification = notifications[notif]
+            const { message } = notification
 
             return (
               <div
                 key={index}
-                className={[
-                  classes.notification,
-                  isDark && classes.isDark,
-                ].filter(Boolean).join(' ')}
+                className={[classes.notification, isDark && classes.isDark]
+                  .filter(Boolean)
+                  .join(' ')}
               >
                 {message}
               </div>
-            );
-          })
-        )}
+            )
+          })}
       </div>
     </NotificationsContext.Provider>
-  );
-};
+  )
+}

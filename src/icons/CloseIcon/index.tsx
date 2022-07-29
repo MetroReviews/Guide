@@ -1,5 +1,5 @@
-import React from 'react';
-import classes from '../index.module.scss';
+import React from 'react'
+import classes from '../index.module.scss'
 
 export const CloseIcon: React.FC<{
   color?: string
@@ -8,13 +8,7 @@ export const CloseIcon: React.FC<{
   className?: string
   rotation?: number
 }> = (props) => {
-  const {
-    color,
-    size,
-    className,
-    bold,
-    rotation
-  } = props;
+  const { color, size, className, bold, rotation } = props
 
   return (
     <svg
@@ -27,8 +21,10 @@ export const CloseIcon: React.FC<{
         color && classes[color],
         size && classes[size],
         className,
-        bold && classes.bold
-      ].filter(Boolean).join(' ')}
+        bold && classes.bold,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}
     >
       <path

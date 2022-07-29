@@ -1,35 +1,31 @@
-import { useWindowInfo } from "@faceless-ui/window-info";
-import { createContext, useState, useContext, useEffect } from "react"
+import { useWindowInfo } from '@faceless-ui/window-info'
+import { createContext, useState, useContext, useEffect } from 'react'
 
 type ICustomCursorContext = {
-  showCustomCursor: boolean,
+  showCustomCursor: boolean
   setShowCustomCursor: (showCustomCursor: boolean) => void // eslint-disable-line
-  highlightCursor: boolean,
+  highlightCursor: boolean
   setHighlightCursor: (showCustomCursor: boolean) => void // eslint-disable-line
 }
 
-export const CustomCursorContext = createContext({} as ICustomCursorContext);
-export const useCustomCursor = () => useContext(CustomCursorContext);
+export const CustomCursorContext = createContext({} as ICustomCursorContext)
+export const useCustomCursor = () => useContext(CustomCursorContext)
 
 export const CustomCursorProvider: React.FC<{
   children: React.ReactNode
 }> = (props) => {
-  const { children } = props;
+  const { children } = props
 
-  const [showCustomCursor, setShowCustomCursor] = useState(false);
-  const [highlightCursor, setHighlightCursor] = useState(false);
+  const [showCustomCursor, setShowCustomCursor] = useState(false)
+  const [highlightCursor, setHighlightCursor] = useState(false)
 
-  const {
-    breakpoints: {
-      m: midBreak
-    } = {}
-  } = useWindowInfo();
+  const { breakpoints: { m: midBreak } = {} } = useWindowInfo()
 
   useEffect(() => {
     if (midBreak) {
-      setShowCustomCursor(false);
+      setShowCustomCursor(false)
     }
-  }, [midBreak]);
+  }, [midBreak])
 
   return (
     <CustomCursorContext.Provider
@@ -37,7 +33,7 @@ export const CustomCursorProvider: React.FC<{
         setShowCustomCursor,
         showCustomCursor,
         highlightCursor,
-        setHighlightCursor
+        setHighlightCursor,
       }}
     >
       {children}

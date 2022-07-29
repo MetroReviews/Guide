@@ -1,46 +1,42 @@
-import { AppProps } from 'next/app';
-import { AppHead } from '../components/AppHead';
-import { Footer } from '../layout/Footer';
-import { Header } from '../layout/Header';
+import { AppProps } from 'next/app'
+import { AppHead } from '../components/AppHead'
+import { Footer } from '../layout/Footer'
+import { Header } from '../layout/Header'
 import { GridProvider } from '@faceless-ui/css-grid'
-import { ModalProvider, ModalContainer } from '@faceless-ui/modal';
-import { Fragment } from 'react';
-import { NextPage } from 'next';
-import { Doc } from '@root/layout/Doc';
-import { Versions as VersionsType } from '../providers/Versions';
-import VersionsProvider from '@root/providers/Versions';
-import { NotificationsProvider } from '@root/providers/Notifications';
-import { WindowInfoProvider } from '@faceless-ui/window-info';
-import { MouseInfoProvider } from '@faceless-ui/mouse-info';
-import { ScrollInfoProvider } from '@faceless-ui/scroll-info';
-import { JumplistProvider } from '@faceless-ui/jumplist';
-import DarkModeProvider from '@root/providers/DarkMode';
-import { CustomCursorProvider } from '@root/providers/CustomCursorProvider';
-import { CustomCursor } from '@components/CustomCursor';
-import cssVariables from '../../cssVariables';
-import { ScrollToTopOnRouteChange } from '@components/ScrollToTopOnRouteChange';
-import { GoogleAnalytics } from '@components/GoogleAnalytics';
-import { CloseModalOnRouteChange } from '@components/CloseModalOnRouteChange';
+import { ModalProvider, ModalContainer } from '@faceless-ui/modal'
+import { Fragment } from 'react'
+import { NextPage } from 'next'
+import { Doc } from '@root/layout/Doc'
+import { Versions as VersionsType } from '../providers/Versions'
+import VersionsProvider from '@root/providers/Versions'
+import { NotificationsProvider } from '@root/providers/Notifications'
+import { WindowInfoProvider } from '@faceless-ui/window-info'
+import { MouseInfoProvider } from '@faceless-ui/mouse-info'
+import { ScrollInfoProvider } from '@faceless-ui/scroll-info'
+import { JumplistProvider } from '@faceless-ui/jumplist'
+import DarkModeProvider from '@root/providers/DarkMode'
+import { CustomCursorProvider } from '@root/providers/CustomCursorProvider'
+import { CustomCursor } from '@components/CustomCursor'
+import cssVariables from '../../cssVariables'
+import { ScrollToTopOnRouteChange } from '@components/ScrollToTopOnRouteChange'
+import { GoogleAnalytics } from '@components/GoogleAnalytics'
+import { CloseModalOnRouteChange } from '@components/CloseModalOnRouteChange'
 
-import '../scss/app.scss';
+import '../scss/app.scss'
 
 type NextPageWithLayout = NextPage & {
   Layout?: typeof Doc
 }
 
 type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout,
+  Component: NextPageWithLayout
   versions: VersionsType
 }
 
 const FacelessApp = (appProps: AppPropsWithLayout): React.ReactElement => {
-  const {
-    Component,
-    pageProps,
-    versions
-  } = appProps;
+  const { Component, pageProps, versions } = appProps
 
-  const Layout = Component.Layout || Fragment;
+  const Layout = Component.Layout || Fragment
 
   return (
     <DarkModeProvider>
@@ -56,13 +52,8 @@ const FacelessApp = (appProps: AppPropsWithLayout): React.ReactElement => {
           <ScrollInfoProvider>
             <MouseInfoProvider>
               <NotificationsProvider>
-                <JumplistProvider
-                  rootMargin="-100px 0px 0px 0px"
-                >
-                  <ModalProvider
-                    zIndex={99}
-                    transTime={250}
-                  >
+                <JumplistProvider rootMargin="-100px 0px 0px 0px">
+                  <ModalProvider zIndex={99} transTime={250}>
                     <GridProvider
                       breakpoints={{
                         s: 768,
@@ -118,4 +109,4 @@ const FacelessApp = (appProps: AppPropsWithLayout): React.ReactElement => {
   )
 }
 
-export default FacelessApp;
+export default FacelessApp
